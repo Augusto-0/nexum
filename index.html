@@ -34,14 +34,22 @@
             padding: 0 20px;
         }
 
-        /* Header */
+        /* Header com animação de scroll */
         header {
             padding: 20px 0;
-            background-color: rgba(26, 26, 64, 0.9);
-            position: sticky;
+            background-color: rgba(26, 26, 64, 0.95);
+            position: fixed;
             top: 0;
-            z-index: 100;
+            left: 0;
+            right: 0;
+            z-index: 1000;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+            transform: translateY(0);
+        }
+
+        header.hidden {
+            transform: translateY(-100%);
         }
 
         .header-content {
@@ -102,6 +110,11 @@
 
         nav a:hover::after {
             width: 100%;
+        }
+
+        /* Adiciona espaço no topo para compensar o header fixo */
+        main {
+            padding-top: 80px;
         }
 
         /* Hero Section com Nebulosa */
@@ -357,12 +370,16 @@
             .hero-bullets li {
                 font-size: 1rem;
             }
+            
+            main {
+                padding-top: 120px;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Header -->
-    <header>
+    <header id="mainHeader">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
@@ -383,101 +400,131 @@
         </div>
     </header>
 
-    <!-- Hero Section com Nebulosa -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>NEXUM</h2>
-                <p>Eletrodomésticos & Móveis</p>
-                <ul class="hero-bullets">
-                    <li><i class="fas fa-check-circle"></i> Sua galáxia de eletrodomésticos e móveis</li>
-                    <li><i class="fas fa-check-circle"></i> Descubra produtos que transformam seu lar em um universo de conforto e estilo</li>
-                    <li><i class="fas fa-check-circle"></i> Entrega rápida em todo o Brasil</li>
-                    <li><i class="fas fa-check-circle"></i> Preços especiais para compras à vista</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Products Section -->
-    <section class="products">
-        <div class="container">
-            <div class="section-title">
-                <h2>Nossos Produtos</h2>
-                <p>Descubra nossa coleção exclusiva de eletrodomésticos e móveis selecionados especialmente para você</p>
-            </div>
-            <div class="product-grid">
-                <div class="product-card">
-                    <div class="product-img">
-                        <img src="imgs/aoc 50.webp" alt="Geladeira Moderna">
-                    </div>
-                    <div class="product-info">
-                        <h3>Geladeira Moderna</h3>
-                        <p>Design inovador com tecnologia frost-free e controle de temperatura preciso.</p>
-                        <div class="product-price">R$ 3.499,00</div>
-                        <a href="#" class="product-btn">Comprar Agora</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-img">
-                        <img src="imgs/barra vr.webp" alt="Bicicleta Barra Circular  Vermelha">
-                    </div>
-                    <div class="product-info">
-                        <h3>Bicicleta Barra Circular  Vermelha</h3>
-                        <p>Com um quadro em aço reforçado, garante durabilidade e resistência,  rodas de 26 polegadas, suporte de até 120 kg. </p>
-                        <div class="product-price">R$ 772,00</div>
-                        <a href="#" class="product-btn">Comprar Agora</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-img">
-                        <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Fogão 5 Bocas">
-                    </div>
-                    <div class="product-info">
-                        <h3>Fogão 5 Bocas</h3>
-                        <p>Alto desempenho com forno autolimpante e acendimento automático.</p>
-                        <div class="product-price">R$ 1.899,00</div>
-                        <a href="#" class="product-btn">Comprar Agora</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Sobre a NEXUM</h3>
-                    <p>Somos uma empresa especializada em eletrodomésticos e móveis de alta qualidade, oferecendo os melhores produtos para transformar sua casa em um lar.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Links Rápidos</h3>
-                    <ul>
-                        <li><a href="#">Produtos</a></li>
-                        <li><a href="#">Sobre Nós</a></li>
-                        <li><a href="#">Contato</a></li>
-                        <li><a href="#">Política de Privacidade</a></li>
+    <main>
+        <!-- Hero Section com Nebulosa -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>NEXUM</h2>
+                    <p>Eletrodomésticos & Móveis</p>
+                    <ul class="hero-bullets">
+                        <li><i class="fas fa-check-circle"></i> Sua galáxia de eletrodomésticos e móveis</li>
+                        <li><i class="fas fa-check-circle"></i> Descubra produtos que transformam seu lar em um universo de conforto e estilo</li>
+                        <li><i class="fas fa-check-circle"></i> Entrega rápida em todo o Brasil</li>
+                        <li><i class="fas fa-check-circle"></i> Preços especiais para compras à vista</li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h3>Contato</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Av. Principal, 1234, São Paulo</p>
-                    <p><i class="fas fa-phone"></i> (11) 9999-9999</p>
-                    <p><i class="fas fa-envelope"></i> contato@nexum.com.br</p>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Nossos Produtos</h2>
+                    <p>Descubra nossa coleção exclusiva de eletrodomésticos e móveis selecionados especialmente para você</p>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="imgs/aoc 50.webp" alt="Geladeira Moderna">
+                        </div>
+                        <div class="product-info">
+                            <h3>Geladeira Moderna</h3>
+                            <p>Design inovador com tecnologia frost-free e controle de temperatura preciso.</p>
+                            <div class="product-price">R$ 3.499,00</div>
+                            <a href="#" class="product-btn">Comprar Agora</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="imgs/barra vr.webp" alt="Bicicleta Barra Circular Vermelha">
+                        </div>
+                        <div class="product-info">
+                            <h3>Bicicleta Barra Circular Vermelha</h3>
+                            <p>Com um quadro em aço reforçado, garante durabilidade e resistência, rodas de 26 polegadas, suporte de até 120 kg.</p>
+                            <div class="product-price">R$ 772,00</div>
+                            <a href="#" class="product-btn">Comprar Agora</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Fogão 5 Bocas">
+                        </div>
+                        <div class="product-info">
+                            <h3>Fogão 5 Bocas</h3>
+                            <p>Alto desempenho com forno autolimpante e acendimento automático.</p>
+                            <div class="product-price">R$ 1.899,00</div>
+                            <a href="#" class="product-btn">Comprar Agora</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Sobre a NEXUM</h3>
+                        <p>Somos uma empresa especializada em eletrodomésticos e móveis de alta qualidade, oferecendo os melhores produtos para transformar sua casa em um lar.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Links Rápidos</h3>
+                        <ul>
+                            <li><a href="#">Produtos</a></li>
+                            <li><a href="#">Sobre Nós</a></li>
+                            <li><a href="#">Contato</a></li>
+                            <li><a href="#">Política de Privacidade</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contato</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Av. Principal, 1234, São Paulo</p>
+                        <p><i class="fas fa-phone"></i> (11) 9999-9999</p>
+                        <p><i class="fas fa-envelope"></i> contato@nexum.com.br</p>
+                    </div>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2023 NEXUM - Todos os direitos reservados</p>
+                </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 NEXUM - Todos os direitos reservados</p>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </main>
+
+    <script>
+        // Controle do header com animação de scroll
+        let lastScrollTop = 0;
+        const header = document.getElementById('mainHeader');
+        const scrollThreshold = 100; // Quantos pixels rolar antes de esconder
+
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
+                // Rolando para baixo - esconde o header
+                header.classList.add('hidden');
+            } else {
+                // Rolando para cima - mostra o header
+                header.classList.remove('hidden');
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+
+        // Previne que o header fique escondido se o usuário rolar rapidamente para o topo
+        window.addEventListener('scrollend', function() {
+            if (window.pageYOffset === 0) {
+                header.classList.remove('hidden');
+            }
+        });
+    </script>
 </body>
 </html>
