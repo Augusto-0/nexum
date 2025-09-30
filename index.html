@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEXUM - Eletrodomésticos & Móveis</title>
+    <link rel="shortcut icon" href="logo/ChatGPT Image degra.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -31,19 +32,19 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 15px;
         }
 
-        /* Header com animação de scroll */
+        /* Header */
         header {
-            padding: 20px 0;
-            background-color: rgba(26, 26, 64, 0.95);
+            padding: 15px 0;
+            background-color: rgba(26, 26, 64, 0.98);
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 1000;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease-in-out;
             transform: translateY(0);
         }
@@ -65,7 +66,7 @@
         }
 
         .logo h1 {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             font-weight: 800;
             background: linear-gradient(to right, var(--accent), var(--text-light));
             -webkit-background-clip: text;
@@ -73,8 +74,8 @@
         }
 
         .logo-icon img {
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
             border-radius: 8px;
             display: block;
         }
@@ -82,48 +83,35 @@
         nav ul {
             display: flex;
             list-style: none;
-            gap: 30px;
+            gap: 20px;
         }
 
         nav a {
             color: var(--text-light);
             text-decoration: none;
             font-weight: 500;
+            font-size: 0.9rem;
             transition: color 0.3s;
             position: relative;
+            cursor: pointer;
         }
 
         nav a:hover {
             color: var(--accent);
         }
 
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent);
-            transition: width 0.3s;
-        }
-
-        nav a:hover::after {
-            width: 100%;
-        }
-
-        /* Adiciona espaço no topo para compensar o header fixo */
+        /* Main */
         main {
-            padding-top: 80px;
+            padding-top: 70px;
         }
 
-        /* Hero Section com Nebulosa */
+        /* Hero Section */
         .hero {
-            padding: 100px 0;
+            padding: 60px 0;
             text-align: center;
             background: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
             position: relative;
-            min-height: 80vh;
+            min-height: 70vh;
             display: flex;
             align-items: center;
         }
@@ -135,7 +123,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(39, 0, 130, 0.7), rgba(122, 11, 192, 0.7));
+            background: linear-gradient(135deg, rgba(39, 0, 130, 0.8), rgba(122, 11, 192, 0.8));
         }
 
         .hero-content {
@@ -143,164 +131,399 @@
             z-index: 1;
             max-width: 800px;
             margin: 0 auto;
+            padding: 0 15px;
         }
 
         .hero h2 {
-            font-size: 4rem;
-            margin-bottom: 20px;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
             font-weight: 800;
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
 
         .hero p {
-            font-size: 1.8rem;
-            margin-bottom: 30px;
+            font-size: 1.4rem;
+            margin-bottom: 25px;
             color: var(--text-light);
             text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         }
 
         .hero-bullets {
             text-align: left;
-            max-width: 600px;
+            max-width: 500px;
             margin: 0 auto;
-            background: rgba(26, 26, 64, 0.7);
-            padding: 25px;
-            border-radius: 15px;
+            background: rgba(26, 26, 64, 0.8);
+            padding: 20px;
+            border-radius: 12px;
             backdrop-filter: blur(5px);
         }
 
         .hero-bullets li {
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 1.2rem;
+            gap: 8px;
+            font-size: 1rem;
         }
 
         .hero-bullets i {
             color: var(--accent);
-            font-size: 1.5rem;
+            font-size: 1.2rem;
         }
 
         /* Products Section */
         .products {
-            padding: 80px 0;
+            padding: 50px 0;
             background-color: rgba(26, 26, 64, 0.7);
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .section-title h2 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
+            font-size: 2rem;
+            margin-bottom: 10px;
             color: var(--text-light);
         }
 
         .section-title p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--text-muted);
-            max-width: 600px;
+            max-width: 500px;
             margin: 0 auto;
         }
 
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
         }
 
+        /* ⭐⭐ CARD COM BOTÃO SEMPRE ALINHADO ⭐⭐ */
         .product-card {
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
         .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .product-img-container {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            background: rgba(39, 0, 130, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
         }
 
         .product-img {
-            height: 200px;
-            overflow: hidden;
-        }
-
-        .product-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
             transition: transform 0.5s;
+            padding: 10px;
         }
 
-        .product-card:hover .product-img img {
-            transform: scale(1.1);
+        .product-card:hover .product-img {
+            transform: scale(1.05);
+        }
+
+        .product-multiple-indicator {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            display: flex;
+            align-items: center;
+            gap: 4px;
         }
 
         .product-info {
-            padding: 20px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
         }
 
         .product-info h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
             color: var(--text-light);
         }
 
         .product-info p {
             color: var(--text-muted);
-            margin-bottom: 15px;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+            flex-grow: 1;
         }
 
         .product-price {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 700;
             color: var(--accent);
             margin-bottom: 15px;
+        }
+
+        /* ⭐⭐ CONTAINER DO BOTÃO ALINHADO ⭐⭐ */
+        .product-btn-container {
+            margin-top: auto;
+            padding-top: 10px;
         }
 
         .product-btn {
             display: inline-block;
             background: linear-gradient(to right, var(--primary-light), var(--accent));
             color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 12px 20px;
+            border-radius: 6px;
             text-decoration: none;
             font-weight: 600;
-            transition: opacity 0.3s;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            text-align: center;
         }
 
         .product-btn:hover {
-            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Modal de Produto */
+        .product-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .product-modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 15px;
+            width: 100%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            font-size: 1rem;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-close:hover {
+            background: var(--accent);
+        }
+
+        .modal-gallery {
+            position: relative;
+            min-height: 300px;
+            max-height: 400px;
+            overflow: hidden;
+            border-radius: 15px 15px 0 0;
+            background: rgba(26, 26, 64, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-gallery img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: none;
+        }
+
+        .modal-gallery img.active {
+            display: block;
+        }
+
+        .gallery-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+            z-index: 5;
+        }
+
+        .gallery-nav:hover {
+            background: var(--accent);
+        }
+
+        .gallery-prev {
+            left: 10px;
+        }
+
+        .gallery-next {
+            right: 10px;
+        }
+
+        .gallery-dots {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 5;
+        }
+
+        .gallery-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .gallery-dot.active {
+            background: var(--accent);
+        }
+
+        .modal-info {
+            padding: 20px;
+        }
+
+        .modal-info h2 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            color: var(--text-light);
+        }
+
+        .modal-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .modal-description {
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .modal-btn {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .modal-btn.buy {
+            background: linear-gradient(135deg, var(--primary-light), var(--accent));
+            color: white;
+        }
+
+        .modal-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
         /* Footer */
         footer {
             background-color: var(--primary-dark);
-            padding: 50px 0 20px;
+            padding: 40px 0 20px;
             text-align: center;
         }
 
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
         }
 
         .footer-section h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
             color: var(--accent);
         }
 
         .footer-section p, .footer-section li {
             color: var(--text-muted);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
         }
 
         .footer-section ul {
@@ -319,38 +542,40 @@
 
         .social-icons {
             display: flex;
-            gap: 15px;
+            gap: 12px;
             justify-content: center;
+            margin-bottom: 20px;
         }
 
         .social-icons a {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
             border-radius: 50%;
             background: linear-gradient(135deg, var(--primary-light), var(--accent));
             color: white;
-            font-size: 1.2rem;
+            font-size: 1rem;
             transition: transform 0.3s;
         }
 
         .social-icons a:hover {
-            transform: translateY(-5px);
+            transform: translateY(-3px);
         }
 
         .footer-bottom {
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 20px;
+            padding-top: 15px;
             color: var(--text-muted);
+            font-size: 0.8rem;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
-                gap: 20px;
+                gap: 15px;
             }
             
             nav ul {
@@ -360,7 +585,7 @@
             }
             
             .hero h2 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
             
             .hero p {
@@ -368,11 +593,47 @@
             }
             
             .hero-bullets li {
-                font-size: 1rem;
+                font-size: 0.9rem;
             }
             
             main {
-                padding-top: 120px;
+                padding-top: 100px;
+            }
+
+            .modal-content {
+                margin: 5px;
+            }
+
+            .modal-gallery {
+                min-height: 250px;
+                max-height: 300px;
+                padding: 15px;
+            }
+
+            .modal-actions {
+                flex-direction: column;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .product-img-container {
+                height: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .modal-gallery {
+                min-height: 200px;
+                max-height: 250px;
+                padding: 10px;
+            }
+            
+            .gallery-nav {
+                width: 35px;
+                height: 35px;
             }
         }
     </style>
@@ -390,7 +651,7 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="#">Produtos</a></li>
+                        <li><a href="#" onclick="scrollToProducts()">Produtos</a></li>
                         <li><a href="#">Sobre</a></li>
                         <li><a href="#">Contato</a></li>
                         <li><a href="#">Promoções</a></li>
@@ -401,7 +662,7 @@
     </header>
 
     <main>
-        <!-- Hero Section com Nebulosa -->
+        <!-- Hero Section -->
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
@@ -409,55 +670,23 @@
                     <p>Eletrodomésticos & Móveis</p>
                     <ul class="hero-bullets">
                         <li><i class="fas fa-check-circle"></i> Sua galáxia de eletrodomésticos e móveis</li>
-                        <li><i class="fas fa-check-circle"></i> Descubra produtos que transformam seu lar em um universo de conforto e estilo</li>
+                        <li><i class="fas fa-check-circle"></i> Descubra produtos que transformam seu lar</li>
                         <li><i class="fas fa-check-circle"></i> Entrega rápida em todo o Brasil</li>
-                        <li><i class="fas fa-check-circle"></i> Preços especiais para compras à vista</li>
+                        <li><i class="fas fa-check-circle"></i> Preços especiais à vista</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <!-- Products Section -->
-        <section class="products">
+        <section id="products" class="products">
             <div class="container">
                 <div class="section-title">
                     <h2>Nossos Produtos</h2>
-                    <p>Descubra nossa coleção exclusiva de eletrodomésticos e móveis selecionados especialmente para você</p>
+                    <p>Descubra nossa coleção exclusiva de eletrodomésticos e móveis</p>
                 </div>
-                <div class="product-grid">
-                    <div class="product-card">
-                        <div class="product-img">
-                            <img src="imgs/aoc 50.webp" alt="Geladeira Moderna">
-                        </div>
-                        <div class="product-info">
-                            <h3>Geladeira Moderna</h3>
-                            <p>Design inovador com tecnologia frost-free e controle de temperatura preciso.</p>
-                            <div class="product-price">R$ 3.499,00</div>
-                            <a href="#" class="product-btn">Comprar Agora</a>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-img">
-                            <img src="imgs/barra vr.webp" alt="Bicicleta Barra Circular Vermelha">
-                        </div>
-                        <div class="product-info">
-                            <h3>Bicicleta Barra Circular Vermelha</h3>
-                            <p>Com um quadro em aço reforçado, garante durabilidade e resistência, rodas de 26 polegadas, suporte de até 120 kg.</p>
-                            <div class="product-price">R$ 772,00</div>
-                            <a href="#" class="product-btn">Comprar Agora</a>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-img">
-                            <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Fogão 5 Bocas">
-                        </div>
-                        <div class="product-info">
-                            <h3>Fogão 5 Bocas</h3>
-                            <p>Alto desempenho com forno autolimpante e acendimento automático.</p>
-                            <div class="product-price">R$ 1.899,00</div>
-                            <a href="#" class="product-btn">Comprar Agora</a>
-                        </div>
-                    </div>
+                <div class="product-grid" id="productGrid">
+                    <!-- Os produtos serão gerados automaticamente pelo JavaScript -->
                 </div>
             </div>
         </section>
@@ -468,28 +697,24 @@
                 <div class="footer-content">
                     <div class="footer-section">
                         <h3>Sobre a NEXUM</h3>
-                        <p>Somos uma empresa especializada em eletrodomésticos e móveis de alta qualidade, oferecendo os melhores produtos para transformar sua casa em um lar.</p>
+                        <p>Especializada em eletrodomésticos e móveis de alta qualidade para transformar sua casa.</p>
                     </div>
                     <div class="footer-section">
                         <h3>Links Rápidos</h3>
                         <ul>
-                            <li><a href="#">Produtos</a></li>
+                            <li><a href="#" onclick="scrollToProducts()">Produtos</a></li>
                             <li><a href="#">Sobre Nós</a></li>
                             <li><a href="#">Contato</a></li>
-                            <li><a href="#">Política de Privacidade</a></li>
                         </ul>
                     </div>
                     <div class="footer-section">
                         <h3>Contato</h3>
-                        <p><i class="fas fa-map-marker-alt"></i> Av. Principal, 1234, São Paulo</p>
                         <p><i class="fas fa-phone"></i> (11) 9999-9999</p>
                         <p><i class="fas fa-envelope"></i> contato@nexum.com.br</p>
                     </div>
                 </div>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-whatsapp"></i></a>
                 </div>
                 <div class="footer-bottom">
@@ -499,30 +724,297 @@
         </footer>
     </main>
 
-    <script>
-        // Controle do header com animação de scroll
-        let lastScrollTop = 0;
-        const header = document.getElementById('mainHeader');
-        const scrollThreshold = 100; // Quantos pixels rolar antes de esconder
+    <!-- Modal de Produto -->
+    <div id="productModal" class="product-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeProductModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="modal-gallery">
+                <!-- As imagens serão inseridas aqui via JavaScript -->
+            </div>
+            
+            <div class="modal-info">
+                <h2 id="modalProductName">Nome do Produto</h2>
+                <div class="modal-price" id="modalProductPrice">R$ 0,00</div>
+                <div class="modal-description" id="modalProductDescription">
+                    Descrição do produto será inserida aqui.
+                </div>
+                <div class="modal-actions">
+                    <button class="modal-btn buy" id="modalBuyButton">
+                        <i class="fas fa-shopping-bag"></i> Levar Agora!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        window.addEventListener('scroll', function() {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
-            if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
-                // Rolando para baixo - esconde o header
-                header.classList.add('hidden');
-            } else {
-                // Rolando para cima - mostra o header
-                header.classList.remove('hidden');
+    <script>
+        // =============================================
+        // ⭐⭐ PRODUTOS EXISTENTES - MANTIDOS ⭐⭐
+        // =============================================
+        const products = [
+            {
+                name: "Smart Tv 65 Hq 4k 3 Hdmi 2 Usb Wi-fi Design Slim",
+                price: "R$  3.555,00",
+                description: "Conta com wi-fi y porto de rede, possui 3 portas HDMI, equipado com conexão USB, dimensões: 1,375 metros de largura, 89,7 centímetros de altura e 27 centímetros de profundidade, com conectividade via Bluetooth.",
+                images: [
+                    "imgs/Smart tv 65 hq/1.png",
+                    "imgs/Smart tv 65 hq/2.png",
+                    "imgs/Smart tv 65 hq/3.png",
+                    "imgs/Smart tv 65 hq/4.png",
+                    "imgs/Smart tv 65 hq/5.png",
+                ],
+                buyLink: "https://wa.me/5517982157517?text=Tenho%20interesse%20na%20Smart%20tv%2065%22%20hq%20%F0%9F%A4%A9"
+            },
+            {
+                name: "Smart Tv U8600f Crystal Uhd 4k 50 2025 Preto Samsung",
+                price: "R$ 2.692,00",
+                description: "MODERNIDADE PARA SUA CASA! É a escolha perfeita para quem busca uma experiência de visualização excepcional, com resolução 4K impressionante que traz imagens nítidas e vibrantes. O modelo utiliza retroiluminação LED, garantindo cores mais profundas e contrastes acentuados. Equipado com sistema operacional Tizen, oferece acesso fácil a diversos aplicativos, incluindo YouTube e assistentes virtuais como Bixby. Com taxa de atualização de 60 Hz e suporte a HDR, proporciona qualidade cinematográfica para filmes e séries. Conta ainda com conexão Wi-Fi e Bluetooth, facilitando o emparelhamento com outros dispositivos. Dimensões e peso com suporte: altura 69,4 centímetros, largura 11,20 centímetros, comprimento 23,7 centímetros e peso 9,50 quilogramas."
+,
+                images: [
+                    "imgs/Smart Tv U8600f Crystal Uhd 4k/1.png",
+                    "imgs/Smart Tv U8600f Crystal Uhd 4k/2.png",
+                    "imgs/Smart Tv U8600f Crystal Uhd 4k/3.png",
+                    "imgs/Smart Tv U8600f Crystal Uhd 4k/4.webp",
+                    "imgs/Smart Tv U8600f Crystal Uhd 4k/5.png",
+                ],
+                buyLink: "https://wa.me/5517982157517?text=Tenho%20interesse%20na%20Smart%20Tv%20U8600f%20Crystal%20Uhd%204k%20Samsung%20%F0%9F%A4%A9"
+            },
+            {
+                name: "Smart Tv 32 Hd Aoc Tv 32s5045/78g Hdmi 1 Usb Wifi Roku",
+                price: "R$ 1.161,00",
+                description: "CONECTIVIDADE E IMERSÃO! Descubra uma experiência de entretenimento com a Smart TV AOC Roku TV 32 polegadas HD. Seu design sem bordas adiciona um toque moderno ao ambiente, enquanto o painel HD oferece imagens nítidas, cores vivas e realistas. Com acesso a milhares de canais de streaming, você pode assistir seus filmes, séries e programas favoritos com uma interface simples e intuitiva. A conectividade é um destaque com Wi-Fi Dual Band, garantindo estabilidade e rapidez, e 3 entradas HDMI para conectar outros dispositivos com som e imagem de alta qualidade. Além disso, o controle remoto com atalhos facilita o acesso a aplicativos como Netflix e YouTube. Com o App Roku, transforme seu smartphone em controle remoto, aproveite audição privada e compartilhe músicas e fotos diretamente na TV. Compatível com os principais assistentes de voz, esta Smart TV permite comandos rápidos e práticos. Ideal para casas conectadas, a AOC Roku TV une tecnologia, elegância e praticidade, tornando o entretenimento acessível e personalizado. Dimensões e peso: TV sem suporte altura 71,63 centímetros, largura 43,29 centímetros, profundidade 7,56 centímetros, peso 3,9 quilogramas. TV com suporte altura 71,63 centímetros, largura 46,62 centímetros, profundidade 16,44 centímetros, peso 3,95 quilogramas.",
+                images: [
+                    "imgs/Smart Tv 32 Hd Aoc/1.png",
+                    "imgs/Smart Tv 32 Hd Aoc/2.png",
+                    "imgs/Smart Tv 32 Hd Aoc/3.png",
+                    "imgs/Smart Tv 32 Hd Aoc/4.png",
+                    "imgs/Smart Tv 32 Hd Aoc/5.png",
+                    "imgs/Smart Tv 32 Hd Aoc/6.png",
+                    "imgs/Smart Tv 32 Hd Aoc/7.png",
+                    "imgs/Smart Tv 32 Hd Aoc/8.png",
+                    "imgs/Smart Tv 32 Hd Aoc/9.png",
+
+                ],
+                buyLink: "https://wa.me/5517982157517?text=Tenho%20interesse%20na%20Smart%20Tv%2032%22%20Hd%20Aoc%20%F0%9F%A4%A9"
+            },
+            {
+               name: "Sofá Retrátil Reclinável 3 Lugares Suede - Phormatta Evolution SMP",
+               price: "R$ 1.690,00",
+               description: "Sofá retrátil reclinável 3 lugares suede. Ter móveis em casa que proporcionam conforto e sensação de aconchego faz toda a diferença, e os móveis da SMP deixam sua casa mais bonita e decorada. O sofá Phormatta Evolution de 3 lugares é retrátil e reclinável, ideal para quem gosta de conforto nas horas de lazer. Produzido em madeira pinus e eucalipto 100% reflorestada, oferece resistência e sustentabilidade. O revestimento em suede com acabamento pena garante beleza, maciez e qualidade ao produto. Atenção: a tonalidade da cor do tecido pode variar conforme o lote do fabricante. Características: 3 lugares, revestimento em suede, cor caramelo, peso suportado de até 80 quilos, tipo retrátil e reclinável."
+,
+               images: [
+                   "imgs/Sofá retra, 3L SUED Phormatta smp/1.png",
+                   "imgs/Sofá retra, 3L SUED Phormatta smp/2.png",
+                   "imgs/Sofá retra, 3L SUED Phormatta smp/3.png",
+                   "imgs/Sofá retra, 3L SUED Phormatta smp/4.png",
+                   "imgs/Sofá retra, 3L SUED Phormatta smp/5.png",
+                   "imgs/Sofá retra, 3L SUED Phormatta smp/6.png",
+                   "imgs/Sofá retra, 3L SUED Phormatta smp/7.png",
+                   "imgs/Sofá retra, 3L SUED Phormatta smp/8.png",
+                   "imgs/Sofá retra, 3L SUED Phormatta smp/9.png",
+                ],
+                buyLink: "https://wa.me/5517982157517?text=Tenho%20interesse%20no%20Sof%C3%A1%20retra%2C%203L%20SUED%20Phormatta%20smp%20%F0%9F%A4%A9"
             }
-            
-            lastScrollTop = scrollTop;
+        ];
+
+        // =============================================
+        // 🚀 FUNCIONALIDADES - NÃO PRECISA EDITAR 🚀
+        // =============================================
+        let currentProductIndex = 0;
+        let currentImageIndex = 0;
+
+        // Inicializar a página
+        document.addEventListener('DOMContentLoaded', function() {
+            generateProductCards();
+            setupScrollHeader();
         });
 
-        // Previne que o header fique escondido se o usuário rolar rapidamente para o topo
-        window.addEventListener('scrollend', function() {
-            if (window.pageYOffset === 0) {
-                header.classList.remove('hidden');
+        // Gerar cards dos produtos automaticamente
+        function generateProductCards() {
+            const productGrid = document.getElementById('productGrid');
+            productGrid.innerHTML = '';
+
+            products.forEach((product, index) => {
+                const productCard = `
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="${product.images[0]}" alt="${product.name}" class="product-img" loading="lazy">
+                            ${product.images.length > 1 ? `
+                                <div class="product-multiple-indicator">
+                                    <i class="fas fa-images"></i> ${product.images.length} fotos
+                                </div>
+                            ` : ''}
+                        </div>
+                        <div class="product-info">
+                            <h3>${product.name}</h3>
+                            <p>${product.description.substring(0, 100)}...</p>
+                            <div class="product-price">${product.price}</div>
+                            <div class="product-btn-container">
+                                <button class="product-btn" onclick="openProductModal(${index})">
+                                    <i class="fas fa-eye"></i> Ver Detalhes
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                productGrid.innerHTML += productCard;
+            });
+        }
+
+        // Configurar header com animação de scroll
+        function setupScrollHeader() {
+            let lastScrollTop = 0;
+            const header = document.getElementById('mainHeader');
+            const scrollThreshold = 50;
+
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
+                    header.classList.add('hidden');
+                } else {
+                    header.classList.remove('hidden');
+                }
+                
+                lastScrollTop = scrollTop;
+            });
+        }
+
+        // Rolar até os produtos
+        function scrollToProducts() {
+            const productsSection = document.getElementById('products');
+            productsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Abrir modal do produto
+        function openProductModal(index) {
+            currentProductIndex = index;
+            currentImageIndex = 0;
+            const product = products[index];
+            
+            // Atualizar informações do modal
+            document.getElementById('modalProductName').textContent = product.name;
+            document.getElementById('modalProductPrice').textContent = product.price;
+            document.getElementById('modalProductDescription').textContent = product.description;
+            
+            // Configurar botão de compra
+            const buyButton = document.getElementById('modalBuyButton');
+            buyButton.onclick = () => {
+                if (product.buyLink && product.buyLink !== '#') {
+                    window.open(product.buyLink, '_blank');
+                } else {
+                    alert('Produto adicionado ao carrinho!');
+                }
+            };
+            
+            // Atualizar galeria de imagens
+            updateGallery(product);
+            
+            // Mostrar modal
+            document.getElementById('productModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Atualizar galeria
+        function updateGallery(product) {
+            const gallery = document.querySelector('.modal-gallery');
+            gallery.innerHTML = '';
+
+            // Adicionar imagens
+            product.images.forEach((image, imgIndex) => {
+                const img = document.createElement('img');
+                img.src = image;
+                img.alt = product.name;
+                img.loading = "lazy";
+                img.style.display = imgIndex === 0 ? 'block' : 'none';
+                gallery.appendChild(img);
+            });
+
+            // Adicionar navegação se tiver mais de uma imagem
+            if (product.images.length > 1) {
+                const prevButton = document.createElement('button');
+                prevButton.className = 'gallery-nav gallery-prev';
+                prevButton.innerHTML = '<i class="fas fa-chevron-left"></i>';
+                prevButton.onclick = (e) => {
+                    e.stopPropagation();
+                    navigateGallery(-1, product.images.length);
+                };
+                
+                const nextButton = document.createElement('button');
+                nextButton.className = 'gallery-nav gallery-next';
+                nextButton.innerHTML = '<i class="fas fa-chevron-right"></i>';
+                nextButton.onclick = (e) => {
+                    e.stopPropagation();
+                    navigateGallery(1, product.images.length);
+                };
+                
+                gallery.appendChild(prevButton);
+                gallery.appendChild(nextButton);
+
+                // Adicionar dots
+                const dotsContainer = document.createElement('div');
+                dotsContainer.className = 'gallery-dots';
+                
+                product.images.forEach((_, dotIndex) => {
+                    const dot = document.createElement('button');
+                    dot.className = `gallery-dot ${dotIndex === 0 ? 'active' : ''}`;
+                    dot.onclick = (e) => {
+                        e.stopPropagation();
+                        goToImage(dotIndex);
+                    };
+                    dotsContainer.appendChild(dot);
+                });
+                
+                gallery.appendChild(dotsContainer);
+            }
+        }
+
+        // Navegar na galeria
+        function navigateGallery(direction, totalImages) {
+            currentImageIndex = (currentImageIndex + direction + totalImages) % totalImages;
+            showCurrentImage();
+        }
+
+        // Ir para imagem específica
+        function goToImage(index) {
+            currentImageIndex = index;
+            showCurrentImage();
+        }
+
+        // Mostrar imagem atual
+        function showCurrentImage() {
+            const gallery = document.querySelector('.modal-gallery');
+            const images = gallery.querySelectorAll('img');
+            const dots = gallery.querySelectorAll('.gallery-dot');
+            
+            images.forEach((img, index) => {
+                img.style.display = index === currentImageIndex ? 'block' : 'none';
+            });
+            
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentImageIndex);
+            });
+        }
+
+        // Fechar modal
+        function closeProductModal() {
+            document.getElementById('productModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Fechar modal ao clicar fora ou pressionar ESC
+        document.getElementById('productModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeProductModal();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeProductModal();
             }
         });
     </script>
